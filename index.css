@@ -1,0 +1,388 @@
+/* body{
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+.main{
+    position: relative;
+}
+
+/* .addbtn{
+   display: inline-block;
+   position: relative;
+   margin-left: 73px;
+   margin-top: 43px;
+} */
+
+.header .main{
+   
+    margin: 30px 90px 50px 90px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+  top: 0;  
+  /* left: 0; */
+  width: 90%;  
+  background-color: #f2f2f2; 
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+    
+
+    /* background-color: red; */
+}
+
+.logo{
+    /* margin-top: 3px; */
+    margin-left: 55px;
+    width: 55px;
+    height: 49px;
+    border-radius: 50%;
+   
+
+    /* border:1px solid rgb(158, 155, 155); */
+    /* margin-bottom: 5px; */
+
+}
+.logo:hover{
+    cursor: pointer;
+}
+
+
+
+.logo .img{
+    width: 100%;
+    border-radius: 25px;
+    /* border: 2px solid white; */
+    
+    height: 100%;
+
+    /* border: 2px solid black; */
+
+}
+.header .main ul{
+    display: flex;
+    flex-direction: row;
+    margin-left: 95px;
+    list-style: none;
+    text-decoration: none;
+    margin-top: 14px;
+    font-size: 17px;
+    
+    gap: 33px;
+    
+}
+
+.header .main ul li a{
+    color: black;
+    font-weight: 500;
+
+}
+
+.header .main ul li a:hover{
+   color: rgb(146, 141, 141);
+}
+
+.sandl{
+    margin-left: 433px;
+    
+}
+
+.sandl .btn1{
+   margin-right: 33px;
+   padding: 12px;
+   width: 94px;
+   border: none;
+   background: none;
+   
+   font-weight: 500;
+}
+
+.sandl .btn1:hover{
+background-color:#F5AB8E ;
+cursor: pointer;
+ color: white;
+ border-radius: 25px;
+    outline: none;
+    border: 1px solid white;
+ 
+}
+
+
+
+
+.sandl .btn2{
+    margin-right: 33px;
+    padding: 12px;
+    width: 94px;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid white;
+    background-color: #F5AB8E;
+    cursor: pointer;
+    color: white;
+ }
+ 
+
+
+
+
+#container{
+  display: grid;
+  grid-template-columns: repeat(3,minmax(200px,1fr));
+  gap: 8px;
+  margin-top: 153px;
+  
+     
+}
+
+.card:hover{
+
+    transform: translateY(8px);
+    transition-delay: 1s;
+    /* transition-duration: 0.1s; */
+    transition: all 1s;
+
+}
+
+.card img{
+    margin-left: 87px;
+    width: 200px;
+    height: 200px;  
+}
+
+@media (width < 1300px){
+    #container{
+        grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    }
+}
+.card {
+    /* margin-bottom: 112px; */
+    /* position: absolute; */
+    /* height: 200px; */
+    width: 400px;
+    border-radius: 24px;
+    padding: 12px;
+    text-align: centers;
+    margin: auto;
+    border: 1px solid #ddd;
+    height: 420px;
+    
+    /* background-color: red; */
+    
+    
+}
+
+
+
+
+.card img:hover{
+    
+    background-color: rgb(34, 174, 153);
+    transform: translateY(8px);
+    transition-delay: 1s;
+    /* transition-duration: 0.1s; */
+    transition: all 1s;
+    /* filter: drop-shadow(0px 0px 12px rgb(236, 201, 49)); */
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+
+
+    
+}
+
+.priceone{
+    margin-top: 25px;
+    text-align: center;
+   font-size: 28px;
+   font-family: "shiva";
+}
+
+
+.priceone:hover{
+    /* background-color: rgb(34, 174, 153); */
+    transform: translateX(18px);
+    transition-delay: 2s;
+    /* transition-duration: 0.1s; */
+    transition: all 1s;
+    
+}
+
+.pone{
+    font-family: "neshu";
+    font-size: 29px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/* .descriptionone{
+font-family: "lol";
+
+} */
+
+
+
+@font-face {
+    font-family: lol ;
+    src: url('./WatermintScript_PERSONAL_USE_ONLY.otf');
+}
+
+
+@font-face {
+    font-family: shiva;
+    src: url('./Catherina.otf');
+}
+
+@font-face {
+    font-family:neshu ;
+    src: url('./SevenAndStorm_TB.otf');
+}
+
+
+/* @media only screen and (min-width:100px) and (max-width:600px) {
+    #container{
+        grid-template-columns: repeat(2,2fr);
+        
+        margin: auto;
+        text-align: center;
+    }
+    .pone{
+        text-align: center;
+    }
+
+}
+
+
+@media only screen and (min-width:601px) and (max-width:800px) {
+    #container{
+        grid-template-columns: repeat(3,1fr);
+        margin: auto;
+        text-align: center;
+        
+    }
+}
+
+
+@media only screen and (min-width:801px) and (max-width:1400px) {
+    #container{
+        grid-template-columns: repeat(4,2fr);
+        margin: auto;
+        text-align: center;
+        
+    }
+}
+
+
+@media only screen and (min-width:1401px) and (max-width:1600px) {
+    #container{
+        grid-template-columns: repeat(5,2fr);
+        margin: auto;
+        text-align: center;
+       background-position: center;
+        
+    }
+} */
+
+
+
+
+footer {
+    margin-top: 33px;
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-section {
+    flex: 1 1 300px;
+    margin: 10px;
+    text-align: left;
+  }
+
+  .footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #f39c12; 
+  }
+
+  .footer-section p {
+    line-height: 1.6;
+    color: #ccc;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section a {
+    
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: #f39c12; 
+  }
+
+  .footer-social {
+    margin-top: 20px;
+  }
+
+  .footer-social a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-social a:hover {
+    color: #f39c12; 
+  }
+
+  .footer-section ul{
+    display: flex;
+    gap:10px
+  }
+
+  .addbtn{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    height: 39px;
+    margin-top: 13px;
+    width: 50%;
+    border-radius: 25px;
+    border: none;
+  }
+
+  .addbtn:hover{
+    filter: drop-shadow(0 0 29px#f39c12);
+    background-color: #f39c12;
+    color: black;
+    transition: all 2s linear;
+  }

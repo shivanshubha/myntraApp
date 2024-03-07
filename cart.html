@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <div class="main">
+            <div class="logo">
+                <img src="./logo.png" alt="logo of our company" class="img" onclick="Redirecteverylogin()">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="link home" onclick="RedirectHome()"><a href="#">Home</a></li>
+                    <li class="link create" ><a href="#">Create</a></li>
+                    
+                    <li class="link about " ><a href="#">About</a></li>
+                    <li class="link contact" ><a href="#">Contact</a></li>
+                    <li class="link pricing"><a href="#">Pricing</a></li>
+                </ul>
+
+            </div>
+            <div class="sandl">
+                <span><Button class="btn1" onclick="Redirecttologin()">Log In</Button></span>
+                <span><Button class="btn2" onclick="Redirecttosignup()" >Sign Up</Button></span>
+            </div>
+        </div>
+    <div id="cart-container"></div>
+    <div class="paymentcontainer">
+        <div class="payment">
+            <button onclick="RedirectPayment()"><i class='bx bxs-hand-right' ></i> Pay Now </button>
+        </div>
+    </div>
+</div>
+        
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h2>About Us</h2>
+            <p>Welcome to our Myntra Website. In this Ecommerce website you can easily buy for your favt. product.❤️</p>
+          </div>
+          <div class="footer-section">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Create</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h2>Contact Us</h2>
+            <p>Email: shivanshubharti655@gmail.com</p>
+            <p>Phone:+91 7694089745</p>
+          </div>
+          <div class="footer-section">
+            <h2>Follow Us</h2>
+            <div class="footer-social">
+              <a href="#" target="_blank">Facebook</a>
+              <a href="#" target="_blank">Twitter</a>
+              <a href="#" target="_blank">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+<script>
+    let container = document.getElementById("cart-container")
+    let cartItems = JSON.parse(localStorage.getItem("cartItems"))
+    // let total = 0;
+
+    let displayCartItems = (cartItems)=>{
+        cartItems.forEach((element) =>{
+            let card = document.createElement("div")
+            card.setAttribute("class","card")
+
+            let img = document.createElement("img")
+            img.src = element.image;
+
+            let title = document.createElement("p")
+            title.setAttribute("class", "pone");
+            title.innerHTML = element.title
+
+            let price = document.createElement("h4")
+            price.setAttribute("class", "priceone");
+            price.innerHTML= element.price
+            // total+=element.price;
+
+            card.append(img,title,price)
+            container.append(card)
+        })
+        // let totalPrice = document.createElement("h1")
+        // totalPrice.setAttribute("class","loltotal")
+        // totalPrice.innerHTML=total;
+        // container.append(totalPrice);
+    }
+
+    displayCartItems(cartItems) 
+
+    function RedirectHome() {
+  window.location.href = "./index.html";
+    }
+
+  function RedirectPayment() {
+  window.location.href = "./payment.html";
+}
+
+
+function Redirecteverylogin() {
+  window.location.href = "./index.html";
+}
+
+
+
+function Redirecttologin() {
+  window.location.href = "./loginredirect.html";
+}
+
+function Redirecttosignup() {
+  window.location.href = "./signupredirect.html";
+}
+
+</script>
+
+</html>
+    
+
+
+    

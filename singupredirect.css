@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh ;
+}
+.login{
+    width: 800px;
+    min-height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #222;
+    display: flex;
+    box-shadow: 15px 5px 30px rbga(0,0,0,0.3);
+}
+
+.content{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    transition: 0.5s;
+} 
+
+.content img:hover{
+    transform: scale(1.2);
+}
+
+.content img{
+   width: 90%;
+    
+    
+}
+
+.loginform{
+    flex-basis: 50%;
+    background: #333;
+    font-family: roboto;
+    padding: 25px;
+}
+
+.loginform h1{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+
+.tbox{
+    border-radius: 3px;
+    background: transparent;
+    outline: none;
+    border: 1px solid #55efc4;
+    width: 100%;
+    height: 35px;
+    margin: 30px 0;
+}
+
+.tbox input{
+    background: transparent;
+    width: 90%;
+    outline: none;
+    border: 0;
+    padding-left: 5px;
+    color: white;
+}
+.tbox i{
+    color: #55efc4;
+    font-size: 15px;
+    padding: 7px;
+}
+::placeholder{
+    color: #777;
+}
+
+.loginbtn{
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    background: #00b894;
+    color: #fff;
+    padding: 12px;
+    font-size: 18px;
+}
+
+.loginbtn:hover{
+    transition: all 0.2s linear;
+    filter: drop-shadow(0 0 12px red);
+}
+
+
+/* .social{
+    margin-top: 25px;
+    list-style: none;
+    text-align: center;
+
+}
+
+.social li{
+    display: inline-block;
+}
+
+.social li i{
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    border: 1px solid #55efc4;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+} */
+
+@media(max-width:768px){
+    .login{
+        flex-direction: column;
+        margin: 0 15px;
+    }
+}
